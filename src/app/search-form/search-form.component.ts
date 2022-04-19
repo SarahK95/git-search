@@ -12,14 +12,14 @@ import { NgForm } from '@angular/forms';
 
 export class SearchFormComponent implements OnInit {
  
-  // user!:User;
-  // username!: string;
+   user!:User;
+   username!: string;
 
 
-  // submitUsername(){
+  submitUsername(){
     
 
-  // }
+  }
 
   constructor() { }
 
