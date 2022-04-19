@@ -16,6 +16,7 @@ export class GitResultsComponent implements OnInit {
   user!:User; 
   repoDetails = []; 
   searchGithubService!:SearchGithubService;
+  hideInput!:boolean;
   
 
   constructor() { }
