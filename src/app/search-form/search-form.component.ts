@@ -21,7 +21,7 @@ export class SearchFormComponent implements OnInit {
 
 
   submitUsername(){
-    this.searchGithubService.getUserData(this.username); // Passing the username entered as an arguement to getUserData function in our service then fed to the API for a response if the user exists
+    this.searchGithubService.getUserData(this.username); 
     this.showInput = false;
     this.showData = true;
 

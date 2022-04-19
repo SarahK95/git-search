@@ -15,9 +15,10 @@ import { Repo } from '../repo';
 export class GitResultsComponent implements OnInit {
 
   user!:User; 
-  repoDetails = []; 
+  repoDetails : any; 
   searchGithubService!:SearchGithubService;
   hideInput!:boolean;
+
   
 
   constructor(searchGithubService:SearchGithubService) {

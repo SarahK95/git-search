@@ -6,6 +6,11 @@ import { Repo } from './repo';
   providedIn: 'root'
 })
 export class SearchGithubService {
+  repoData!:any;
+  user!: User;
+  getUserData(username: string) {
+    throw new Error('Method not implemented.');
+  }
 
   constructor() { }
 }
