@@ -1,0 +1,35 @@
+p {
+	font-size: 20px;
+    text-align: center;
+    align-items: center;
+    font-family: cursive;
+   
+}
+
+h4{
+    font-family: cursive;
+    text-decoration: underline;
+    font-style: italic;
+    color: rgb(0, 128, 0);
+}
+
+h4 a{
+    color: rgb(0, 128, 0);
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.description{
+    
+    font-size: 15px;
+    font-family: cursive
+}
+ .repo-detail{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

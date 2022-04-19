@@ -1,5 +1,49 @@
+img{
+    height: 50vh;
+   opacity: 0.6;
+}
+ 
+ 
+ 
  .form-group{
     text-align: center;
     align-items: center;
+    
 }
+
+#username{
+    font-weight: bold;
+    color: #000;
+    margin-left: 400px;
+    margin-top: 20px;
+    font-family: cursive;
+    font-size: 20px;
+}
+
+h2{
+    font-family: cursive;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.397);
+    color:rgb(0, 128, 0);
+    font-weight: bold;
+}
+
+.btn{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    float: right;
+    background: #000;
+    font-family: cursive;
+    font-weight: bold;
+    box-sizing: border-box;
+
+}
+
+.btn:hover{
+    color: rgb(0, 128, 0);
+}
+
  
