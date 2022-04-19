@@ -15,7 +15,7 @@ export class SearchGithubService {
 
   repoData = [];
   repo!:Repo;
-  newUserData = [];
+  newUserData :any= [];
   showInput!:boolean;
 	showData!:boolean;
   user!: User;
@@ -66,7 +66,7 @@ export class SearchGithubService {
 	        	{
 
               this.newUserData = new Repo(response[i].name,response[i].full_name,response[i].description,response[i].updated_at,response[i].html_url,response[i].clone_url,response[i].language,response[i].created_at);
-	        		this.repoData.push(this.newUserData);
+	        		// this.repoData.push(this.newUserData);
             }
 
             resolve()
