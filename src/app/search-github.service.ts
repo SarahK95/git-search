@@ -5,14 +5,17 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 // import { Observable } from './rxjs/Rx';
 
-@Injectable({
-  providedIn: 'root'
-})
+// import * as process from 'process';
+
+@Injectable()
+
+
+
 export class SearchGithubService {
 
   repoData = [];
   repo!:Repo;
-  newUserData :any = [];
+  newUserData = [];
   showInput!:boolean;
 	showData!:boolean;
   user!: User;
@@ -24,7 +27,7 @@ export class SearchGithubService {
 
 
   getUserData(username: string) {
-    throw new Error('Method not implemented.');
+
 
     this.repoData.length = 0;
 
@@ -40,7 +43,7 @@ export class SearchGithubService {
       updated_at:Date,  
   }
 
-  let promise =new Promise((resolve,reject)=>{
+  let promise =new Promise<void>((resolve,reject)=>{
     this.http.get<ApiResponse>("https://api.github.com/users/" + username).toPromise().then((response:any)=>{
       this.user.bio=response.bio;
 	            this.user.avatar_url=response.avatar_url;
@@ -57,6 +60,25 @@ export class SearchGithubService {
     reject(error)
 }
     )
+
+    this.http.get<any>("https://api.github.com/users/" + username + "/repos").toPromise().then(response=>{
+      for(var i=0; i<response.length; i++)
+	        	{
+
+              this.newUserData = new Repo(response[i].name,response[i].full_name,response[i].description,response[i].updated_at,response[i].html_url,response[i].clone_url,response[i].language,response[i].created_at);
+	        		this.repoData.push(this.newUserData);
+            }
+
+            resolve()
+
+
+},
+
+error=>{
+
+  reject(error)
+}
+    )
 })
 
 return promise
@@ -65,11 +87,3 @@ return promise
 
 }
   
-
-  // baseURL: string = 'https://api.github.com';
-
-
-  // getRepos(userName: string): Observable<repo[]> {
-  //   return this.http.get<repo[]>(this.baseURL + '/users/' + userName + '/repos');
-
-

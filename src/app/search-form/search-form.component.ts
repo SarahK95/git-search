@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
  import { User } from '../user';
  import { SearchGithubService } from '../search-github.service';
@@ -18,8 +18,8 @@ export class SearchFormComponent implements OnInit {
    user!:User;
    username!: string;
   searchGithubService: SearchGithubService;
-  showInput: any;
-  showData: any;
+ public showInput: any;
+  public showData: any;
 
 
   submitUsername(){
@@ -38,7 +38,7 @@ export class SearchFormComponent implements OnInit {
     this.searchGithubService = searchGithubService;
    }
 
-  ngOnInit(): void {
+  ngOnInit(): any {
   }
 
 }

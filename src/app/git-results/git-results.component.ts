@@ -27,7 +27,7 @@ export class GitResultsComponent implements OnInit {
 
   @Output() toggleBack = new EventEmitter();
 
-  ngOnInit(): void {
+  ngOnInit(): any {
     this.user = this.searchGithubService.user;
     this.repoDetails = this.searchGithubService.repoData;
 

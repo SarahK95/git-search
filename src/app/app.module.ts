@@ -29,7 +29,7 @@ import { SearchGithubService } from './search-github.service';
   ],
 
 
-  providers: [],  //SearchGithubService
+  providers: [SearchGithubService],  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
