@@ -6,7 +6,11 @@ import { Repo } from './repo';
   providedIn: 'root'
 })
 export class SearchGithubService {
-  repoData!:any;
+  repoData = [];
+  repo!:Repo;
+  newUserData :any = [];
+  showInput!:boolean;
+	showData!:boolean;
   user!: User;
   getUserData(username: string) {
     throw new Error('Method not implemented.');

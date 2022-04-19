@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
  import { User } from '../user';
  import { SearchGithubService } from '../search-github.service';
+ import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-search-form',
