@@ -22,4 +22,4 @@
 
 
 </div>
-<app-git-results></app-git-results>
+<app-git-results *ngIf="showData" (toggleBack)="showUserInput($event)"></app-git-results>

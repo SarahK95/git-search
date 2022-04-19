@@ -2,6 +2,7 @@ import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { SearchGithubService } from '../search-github.service';
 import { User } from '../user';
+import { Repo } from '../repo';
 
 
 @Component({
